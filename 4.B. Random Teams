@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int n, m;
+
+	cin >> n >> m;
+
+	int maxi;
+	int mini;
+
+	maxi = (n - (m - 1)) * (n - (m - 1) - 1) / 2;
+
+	int div = n / m;
+	int mod = n % m;
+
+	mini = mod * (div + 1) * (div) / 2 + (m - mod) * (div) * (div - 1) / 2;
+
+	cout << mini << " " << maxi;
+
+	return 0;
+}
