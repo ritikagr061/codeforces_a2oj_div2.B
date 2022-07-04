@@ -3,17 +3,17 @@ using namespace std;
 
 int main()
 {
-	int n, m;
+	long long int n, m;
 
 	cin >> n >> m;
 
-	int maxi;
-	int mini;
+	long long int maxi;
+	long long int mini;
 
 	maxi = (n - (m - 1)) * (n - (m - 1) - 1) / 2;
 
-	int div = n / m;
-	int mod = n % m;
+	long long int div = n / m;
+	long long int mod = n % m;
 
 	mini = mod * (div + 1) * (div) / 2 + (m - mod) * (div) * (div - 1) / 2;
 
