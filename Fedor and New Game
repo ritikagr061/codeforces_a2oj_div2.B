@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int army_type, players, k;
+
+	cin >> army_type >> players >> k;
+	int arr[players];
+
+	for (int i = 0; i < players; i++)
+	{
+		cin >> arr[i];
+	}
+
+	int fedor_xi;
+	cin >> fedor_xi;
+
+	long long count = 0;
+
+	for (int i = 0; i < players; i++)
+	{
+		int cnt = 0;
+		int xr = fedor_xi ^ arr[i];
+		while (xr)
+		{
+			cnt++;
+			xr = (xr) & (xr - 1);
+		}
+
+		if (cnt <= k)
+			count++;
+
+	}
+
+	cout << count;
+
+	return 0;
+}
